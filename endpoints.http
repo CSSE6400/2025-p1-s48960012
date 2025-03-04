@@ -1,3 +1,29 @@
-@baseurl=http://localhost:6400/
-###health
-GET{{{{baseurl}}/api/v1/health}}
+###Health
+GET http://localhost:6400/api/v1/health
+
+### List All Tools
+GET http://localhost:6400/api/v1/todos
+
+###Speccific
+GET http://localhost:6400/api/v1/todos/1
+
+###Create a TODO
+POST http://localhost:6400/api/v1/todos
+Content-Type: application/json
+
+{
+    "title": "An example Todo by Nitish",
+    "description": "This is an example todo by Nitish"
+}
+
+
+### Update a TODO
+PUT http://localhost:6400/api/v1/todos/1
+Content-Type: application/json
+
+{
+ "title":"Updated title by Nitish",
+}
+
+### Delete
+DELETE http://localhost:6400/api/v1/todos/1
